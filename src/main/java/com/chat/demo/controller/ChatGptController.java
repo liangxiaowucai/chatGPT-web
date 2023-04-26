@@ -16,12 +16,6 @@ import java.util.concurrent.Executors;
 
 
 /**
- * <p>
- * 前端控制器
- * </p>
- *
- * @author InBloom
- * @since 2022-10-07
  */
 @RestController
 @CrossOrigin
