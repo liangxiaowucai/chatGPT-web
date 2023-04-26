@@ -255,6 +255,15 @@ public class ChatController {
     }
 ```
 
+
+![群二维码](https://user-images.githubusercontent.com/42310513/234638681-781357ad-574d-45c2-b6ab-ad51bb6d721f.png)
+群内前沿的AI技术应有尽有，而且打破知识星球的30天增加1.4w人记录，宝藏星球。
+![知识星球](https://user-images.githubusercontent.com/42310513/234638714-a829b79d-7703-48f7-af60-6c304acd02ab.jpeg)
+
+
+
+
+
 现在你就可以正式玩耍了，有一个自己的chat还是很不错很方便的，之后要加入上下文功能吧，如果有任何咨询问题或者合作什么的，可以加我私人微信咯
 
 
