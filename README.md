@@ -1,7 +1,8 @@
 
 <img width="1268" alt="image" src="https://user-images.githubusercontent.com/42310513/234643617-599cef05-f718-4620-b466-f1aabbf56f7f.png">
+<img width="1289" alt="image" src="https://user-images.githubusercontent.com/42310513/234647263-a46e4557-f868-4189-9cc6-f9cd3ec3a446.png">
 
-非常感谢🙏，开源的api上开发的，特此也开源出来，如果有想体验和玩耍的，可以到我的体验地址。
+非常感谢🙏，开源的api上开发的，特此也开源出来，如果有想体验和玩耍的，可以到我的体验地址,容量有限，且行且珍惜 ：http://43.155.140.47:8081/index.html
 
 以下内容均为chatGPT自动生成，暂时还没有验证，如果想要本篇的内容，请拉到下面👇
 # ChatGPT 流式编程集成
