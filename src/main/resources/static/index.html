@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>前端展示后端数据</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .case {
+            background-color: #f5f5f5;
+            width: 80%;
+            height: 200px;
+            margin: 50px auto 0;
+            text-align: center;
+            line-height: 200px;
+            font-size: 50px;
+        }
+
+        .question {
+            background-color: #fff4eb;
+            width: 80%;
+            margin: 50px auto 0;
+            text-align: center;
+        }
+
+        .question textarea {
+            width: 100%;
+            height: 100px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .data {
+            width: 80%;
+            margin: 50px auto 0;
+            text-align: center;
+        }
+
+        .data-container {
+            background-color: #fff4eb;
+            width: 80%;
+            margin: 50px auto 0;
+            text-align: center;
+        }
+
+        .buttons {
+            width: 80%;
+            margin: 50px auto 0;
+            text-align: center;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            background-color: #008CBA;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #0077AA;
+        }
+    </style>
+</head>
+<body>
+<div class="case">请告诉我你要润色的小红书文案。</div>
+<div class="question">
+    <textarea placeholder="请输入问题，500字以内"></textarea>
+</div>
+<div class="data-container data">
+    <!-- SSE 数据流式展示区 -->
+</div>
+<div class="buttons">
+    <button onclick="question()">发送问题</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+<script>
+    // // 发送问题
+    var btn = document.querySelector('button');
+    var textarea = document.querySelector('textarea');
+
+    // var md = window.markdownit();
+
+    function question() {
+        var dataContainer = document.querySelector('.data-container');
+        dataContainer.innerHTML = '';
+        var question = textarea.value.trim();
+        if (question === '' || question === undefined) {
+            alert("请不要输入空问题哦！");
+        }
+        // 获取后端sse数据并展示
+
+        var evtSource = new EventSource('http://localhost:8081/api/chat?content=' + question);
+        evtSource.onmessage = function (en) {
+            // if (en.data.includes('[DONE]')) {
+            //     dataContainer.innerHTML = '';
+            // }
+            dataContainer.innerHTML += en.data;
+        };
+
+    }
+</script>
+</body>
+</html>
