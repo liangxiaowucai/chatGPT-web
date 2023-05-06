@@ -1,0 +1,46 @@
+server:
+  port: 8888
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/chatGPT?useSSL=false
+    username: root
+    password: 110110
+  main:
+    banner-mode: console
+#  mvc:
+#    static-path-pattern: /static/**
+
+mybatis-plus:
+  global-config:
+    banner: false
+    db-config:
+      table-prefix: tb_
+      id-type: auto
+      logic-delete-field: status
+      logic-not-delete-value: 0
+      logic-delete-value: 0
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+openai:
+  apiKey: sk-xxxx
+  model: gpt-3.5-turbo
+  api_endPoint: https://api.openai.com/v1/chat/completions
+  temperature: "0.6"
+  # 查询订阅的API
+  subscription_url: https://api.openai.com/v1/dashboard/billing/subscription
+  # 查询用量的API
+  billing_url: https://api.openai.com/v1/dashboard/billing/usage
+  max_tokens: "1024"
+
+
+  #线程池配置
+thread:
+  corePoolSize: 5
+  maximumPoolSize: 50
+  keepAliveTime: 10
+

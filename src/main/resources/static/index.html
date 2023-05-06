@@ -89,6 +89,7 @@
     // var md = window.markdownit();
 
     function question() {
+        console.log("click")
         var dataContainer = document.querySelector('.data-container');
         dataContainer.innerHTML = '';
         var question = textarea.value.trim();
@@ -97,11 +98,13 @@
         }
         // 获取后端sse数据并展示
 
-        var evtSource = new EventSource('http://localhost:8081/api/chat?content=' + question);
+        var evtSource = new EventSource('http://localhost:8888/api/chat?content=' + question);
+        console.log(evtSource)
         evtSource.onmessage = function (en) {
             // if (en.data.includes('[DONE]')) {
             //     dataContainer.innerHTML = '';
             // }
+            debugger
             dataContainer.innerHTML += en.data;
         };
 
