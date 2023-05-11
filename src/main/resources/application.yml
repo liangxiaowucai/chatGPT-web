@@ -61,8 +61,8 @@ thread:
 # 阿里短信模板配置 需修改
 ali-config:
   sms:
-    accessKeySecret: mfMBMOMRtBBNxP1Jkvlu0FG3uQc9Dn
-    accessKey: LTAI5t67RCEsUXH72t1PpEN1
-    signName: AI小保
-    templateCode: SMS_460735223
+    accessKeySecret: xxx
+    accessKey: xxx
+    signName: xxxx
+    templateCode: xxxx
 
