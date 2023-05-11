@@ -17,5 +17,8 @@ public class SaveUserReq {
     // 验证码
     @ApiModelProperty(value = "邀请码 ", required = false)
     private String superCode;
+    // 验证码
+    @ApiModelProperty(value = "短信码 ", required = false)
+    private String smsCode;
 
 }

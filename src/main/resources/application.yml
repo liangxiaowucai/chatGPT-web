@@ -10,6 +10,19 @@ spring:
     password: 110110
   main:
     banner-mode: console
+
+  # redis配置 需修改
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 1
+    # Redis服务器地址
+    host: 127.0.0.1
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    #    password: 你的密码
+    # 连接超时时间
+    timeout: 10s
 #  mvc:
 #    static-path-pattern: /static/**
 
@@ -43,4 +56,13 @@ thread:
   corePoolSize: 5
   maximumPoolSize: 50
   keepAliveTime: 10
+
+
+# 阿里短信模板配置 需修改
+ali-config:
+  sms:
+    accessKeySecret: mfMBMOMRtBBNxP1Jkvlu0FG3uQc9Dn
+    accessKey: LTAI5t67RCEsUXH72t1PpEN1
+    signName: AI小保
+    templateCode: SMS_460735223
 

@@ -23,7 +23,14 @@ public enum ResultCodeEnum {
     USER_DISABLE_FAIL(false, 16, "用户已被停用，请联系管理员"),
     USER_SEND_COUNT_DONE(false, 17, "用户免费次数已用完"),
 
-    ;
+    //    SMS
+    SMS_CODE_NOT_EXPIRE_ERROR(false, 1001, "验证码未过期，请耐心等待！"),
+    SMS_CODE_EXPIRE_ERROR(false, 1002, "验证码已过期，请重新发送！"),
+    SMS_PHONE_ERROR(false, 1003, "手机号格式错误"),
+    SMS_INVALID_ERROR(false, 1004, "手机验证码错误"),
+
+    //权限,
+    USER_ADD_COUNT_INVALID(false, 2001, "用户权限不足，增加不了次数");
 
     // 响应是否成功
     private Boolean success;
